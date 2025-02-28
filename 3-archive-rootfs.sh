@@ -10,8 +10,9 @@ fi
 rootfs_dir_utc=`readlink $build_dir/$rootfs_dir`
 tar_name=$rootfs_dir_utc$TAR_EXTENSION
 
-cd $build_dir
-tar cfz $tar_name $rootfs_dir_utc
+cd $rootfs_dir_utc
+tar cfz $tar_name ./
+
 cd - >/dev/null
 
 echo
